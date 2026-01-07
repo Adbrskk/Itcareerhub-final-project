@@ -134,15 +134,16 @@
 .categories-list{
   display: flex;
   gap: 1em;
-  flex-wrap: wrap;
 }
 
-.categories-item{
-  flex-grow:  1;
-  flex-shrink: 1;
-  flex-basis: 10px;
-  min-width: 45%;    
-  background-color: red;
-  /* background-color: #97CAD114; */
+.categories-item > div{
+  text-align: center;
+}
+
+.categories-item{  
+  background-color: #97CAD114;
   border-radius: 8px;
+  align-content: center;
+  padding: 15px;
+  flex: 1;
 }
