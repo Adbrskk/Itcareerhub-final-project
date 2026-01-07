@@ -40,6 +40,22 @@
         </div>
     </div>
 
+<section class="events">
+  <div class="container">
+    <div class="events__top">
+      <h2>Events near</h2>
+      <div class="events__location">Mountain View, CA</div>
+      <a href="./events.html" class="events__link">See all events</a>
+    </div>
+
+    <div id="events-list" class="events__grid"></div>
+  </div>
+</section>
+
+
+
+
+
 
     <div class="categories-container container">
         <div class="categories-header">
@@ -255,7 +271,9 @@
 </body>
 
 <script src="./js/main.js"></script>
-    <script>
+<script src="./js/index.js"></script>
+
+<script>
   fetch("header.html")
     .then(response => response.text())
     .then(data => document.getElementById("header-placeholder").innerHTML = data);
