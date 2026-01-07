@@ -9,6 +9,7 @@ const eventsStore = [
     attendees: 99,
     category: "Hobbies and Passions",
     distance: 50,
+    cost: "Free"
   },
   {
     title:
@@ -21,6 +22,7 @@ const eventsStore = [
     attendees: 43,
     category: "Technology",
     distance: 25,
+    cost: "Free"
   },
   {
     title: "Book 40+ Appointments Per Month Using AI and Automation",
@@ -31,6 +33,7 @@ const eventsStore = [
     type: "online",
     category: "Technology",
     distance: 10,
+    cost: "Free"
   },
   {
     title: "Dump writing group weekly meetup",
@@ -42,6 +45,7 @@ const eventsStore = [
     attendees: 77,
     category: "Business",
     distance: 100,
+    cost: "Free"
   },
   {
     title: "Over 40s, 50s, & 60s Senior Singles Chat, Meet & Dating Community",
@@ -53,6 +57,7 @@ const eventsStore = [
     attendees: 140,
     category: "Social Activities",
     distance: 74,
+    cost: "Free"
   },
   {
     title: "All Nations - Manhattan Missions Church Bible Study",
@@ -63,6 +68,7 @@ const eventsStore = [
     type: "offline",
     category: "Health and Wellbeing",
     distance: 15,
+    cost: "Free"
   },
 ];
 
