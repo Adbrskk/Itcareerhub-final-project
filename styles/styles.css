@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -99,4 +99,8 @@
 
 .slider-main {
   margin-top: 30px;
+}
+
+.categories-container{
+  display: flex;
 }
