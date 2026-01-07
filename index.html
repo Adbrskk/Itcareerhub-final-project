@@ -9,7 +9,53 @@
 
 
 <body>
-    
+    <header class="header">
+  <div class="header__container">
+
+    <div class="header__search-block">
+
+      <div class="logo">
+        <img src="/images/logo-header.png" alt="Logo">
+      </div>
+
+      <div class="search">
+        <input
+          class="search__input"
+          type="text"
+          placeholder="Search events"
+        >
+
+        <input
+          class="search__location"
+          type="text"
+          value="Mountain View, CA"
+          readonly
+        >
+
+        <a href="#" class="search__button">
+          🔍
+        </a>
+      </div>
+
+    </div>
+
+    <div class="header__authentication-block">
+
+      <div class="language">
+        🌐 <span>English</span>
+      </div>
+
+      <div class="auth">
+        <span class="auth__login">Log in</span>
+        <a href="#" class="auth__signup">Sign up</a>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
 </body>
 
 <script src="/scripts/main.js"></script>
