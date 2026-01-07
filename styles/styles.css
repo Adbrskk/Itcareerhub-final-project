@@ -107,10 +107,6 @@
   margin-top: 30px;
 }
 
-.categories-list{
-  display: flex;
-}
-
 .slider-text {
   font-size: 42px;
   font-weight: 700;
@@ -126,11 +122,27 @@
   margin: 25px 0;
 }
 
-.slider-button button{
+.slider-button button {
   padding: 14px 28px;
   background: #00798A;
   color: white;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.categories-list{
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.categories-item{
+  flex-grow:  1;
+  flex-shrink: 1;
+  flex-basis: 10px;
+  min-width: 45%;    
+  background-color: red;
+  /* background-color: #97CAD114; */
+  border-radius: 8px;
 }
