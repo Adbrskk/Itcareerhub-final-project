@@ -121,6 +121,7 @@
 .slider-subtext {
   margin: 25px 0;
   padding: 24px 200px 24px 0px;
+  line-height: 24px;
 }
 
 .slider-button button {
