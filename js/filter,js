@@ -1,0 +1,90 @@
+import { eventsStore } from "./index.js";
+
+/* ---------------------------------------
+   Split events and filters
+--------------------------------------- */
+
+const events = eventsStore.filter(item => item.title);
+const filtersConfig = eventsStore.filter(
+  item => item.type && item.options
+);
+
+/* ---------------------------------------
+   Core filter + sort logic
+--------------------------------------- */
+
+function filterAndSortEvents(events, input) {
+  let result = [...events];
+
+  // FILTER: type
+  if (input.type && !input.type.startsWith("Any")) {
+    result = result.filter(e => e.type === input.type);
+  }
+
+  // FILTER: category
+  if (input.category && !input.category.startsWith("Any")) {
+    result = result.filter(e => e.category === input.category);
+  }
+
+  // FILTER: distance
+  if (
+    typeof input.distance === "number"
+  ) {
+    result = result.filter(e => e.distance <= input.distance);
+  }
+
+  // SORT
+  switch (input.sortBy) {
+    case "date":
+      result.sort((a, b) => a.date - b.date);
+      break;
+
+    case "attendees":
+      result.sort((a, b) => b.attendees - a.attendees);
+      break;
+
+    case "distance":
+      result.sort((a, b) => a.distance - b.distance);
+      break;
+
+    default:
+      break;
+  }
+
+  return result;
+}
+
+/* ---------------------------------------
+   Example input (UI / API driven)
+--------------------------------------- */
+
+const inputData = {
+  type: "offline",
+  category: "Technology",
+  distance: 50,
+  sortBy: "date"
+};
+
+/* ---------------------------------------
+   Apply filters
+--------------------------------------- */
+
+const filteredEvents = filterAndSortEvents(
+  events,
+  inputData
+);
+
+/* ---------------------------------------
+   Output (replace with DOM rendering)
+--------------------------------------- */
+
+console.log("Filtered events:", filteredEvents);
+
+/* ---------------------------------------
+   Optional: export for reuse
+--------------------------------------- */
+
+export {
+  filterAndSortEvents,
+  filtersConfig
+};

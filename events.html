@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="events-main">
+        <div class="events-page__container container">
+            <div class="events-content">     
+                <div class="events-header">
+                    <div class="events-header-text">
+                        Events near New York, NY
+                    </div>
+                    <span class="events-header-text-blue">
+                        Events
+                    </span>
+                </div>
+                <div id="filters-placeholder"></div>
+                <div id="events-list" class="events__grid"></div>
+            </div>
+            <div class="slider-image">
+                <img src="./images/main-img.png">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="./js/main.js"></script>
+<script src="./js/index.js"></script>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<script>
+
+</script>
+</html>

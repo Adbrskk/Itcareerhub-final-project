@@ -80,11 +80,11 @@ function renderEvents(events) {
 
             <div class="event-meta-item">
               <img src="./img/icons/going-icon.svg" class="icon-going"/>
-              <span>${event.attendees} going</span>
+              <span>${event.attendees ?? 0} going</span>
 
               <br>
               <img src="./img/icons/free-icon.svg" class="icon-going"/>
-              <span>${event.cost}</span>
+              <span>${event.cost ?? "Free"}</span>
             </div>
 
           </div>
@@ -97,7 +97,115 @@ function renderEvents(events) {
   });
 }
 
+function populateSelects(){
+    const filtersContainer = document.getElementById("filters-placeholder");
+
+    if (filtersContainer == undefined)
+      return;
+    filters.forEach((filter) => {
+    // Create a wrapper div for each filter
+    const wrapper = document.createElement("div");
+    wrapper.className = "filter-wrapper";
+
+    // Create the select element
+    const select = document.createElement("select");
+    select.id = filter.type;
+    select.name = filter.type;
+    select.classList = "filter-select"
+
+    // Populate options
+    filter.options.forEach((option) => {
+        const opt = document.createElement("option");
+
+        // If option is a Date object, format it as a readable string
+        if (option instanceof Date) {
+        opt.value = option.toISOString();
+        opt.textContent = option.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+        } else {
+        opt.value = option;
+        opt.textContent = option;
+        }
+
+        select.appendChild(opt);
+    });
+
+    wrapper.appendChild(select);
+    filtersContainer.appendChild(wrapper);
+    });
+
+    
+  ["type", "category", "distance"].forEach(id => {
+    document.getElementById(id).addEventListener("change", applyFilters);
+  });
+}
+
+
+// -------------------------
+// FILTERING LOGIC
+// -------------------------
+
+function getFilterValues() {
+  return {
+    type: document.getElementById("type").value,
+    category: document.getElementById("category").value,
+    distance: document.getElementById("distance").value,
+  };
+}
+
+function filterAndSortEvents(events) {
+  const filters = getFilterValues();
+  let result = [...events];
+
+  // FILTER: type
+  if (filters.type !== "Any type") {
+    result = result.filter(e => e.type === filters.type);
+  }
+
+  // FILTER: category
+  if (filters.category !== "Any category") {
+    result = result.filter(e => e.category === filters.category);
+  }
+
+  // FILTER: distance
+  if (filters.distance !== "Any distance") {
+    result = result.filter(
+      e => e.distance <= Number(filters.distance)
+    );
+  }
+
+  // SORT
+  switch (filters.sort) {
+    case "date":
+      result.sort((a, b) => new Date(a.date) - new Date(b.date));
+      break;
+    case "attendees":
+      result.sort((a, b) => b.attendees - a.attendees);
+      break;
+    case "distance":
+      result.sort((a, b) => a.distance - b.distance);
+      break;
+  }
+
+  return result;
+}
+
+// -------------------------
+// APPLY FILTERS
+// -------------------------
+
+function applyFilters() {
+  const filteredEvents = filterAndSortEvents(eventsStore);
+  renderEvents(filteredEvents);
+}
+
+// -------------------------
+// LISTEN TO SELECT CHANGES
+// -------------------------
+
+
 document.addEventListener("DOMContentLoaded", () => {
+  populateSelects();
   ensureEightEvents();
   renderEvents(eventsStore);
+
 });

@@ -461,3 +461,54 @@ hr {
     gap: 15px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/*
+===================================================
+              EVENTS PAGE
+===================================================
+*/
+.events-page__container{
+  display: flex;
+}
+
+.events-header-text{
+  font-size: 28px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.events-header-text-blue{
+  font-size: 20px;
+  color: #00798A;
+  border-bottom: 4px solid #00798A;
+}
+
+#filters-placeholder{
+  display: flex;
+  padding: 12px 0;
+}
+
+.filter-wrapper{ 
+  border-radius: 40px; 
+  background-color: #F6F7F8;
+}
+
+.filter-select{
+  background-color: #F6F7F8;
+  border-color: transparent;
+  border-right: 16px solid transparent;
+  margin: 0 15px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
