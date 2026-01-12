@@ -261,6 +261,10 @@ vertical-align: middle;
   text-decoration: underline;
 }
 
+.news-container__text {
+  color: #707070;
+}
+
 .news-header,
 .cities-header,
 .categories-header,
