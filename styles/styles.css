@@ -69,6 +69,10 @@
   border-left: 1px solid #dadada;
 }
 
+.search__button img {
+vertical-align: middle;
+}
+
 .header__authentication-block {
   display: flex;
   align-items: center;
@@ -78,6 +82,10 @@
 .language span {
   cursor: pointer;
   border-bottom: 1px solid transparent;
+}
+
+.language img {
+  vertical-align: middle;
 }
 
 .language span:hover {
@@ -207,6 +215,12 @@
   font-family: Inter, sans-serif;
 }
 
+.events__loc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .events__left {
   display: flex;
   align-items: baseline;
@@ -222,8 +236,18 @@
 
 .events__location {
   font-size: 20px;
-  color: #666;
+  color: #00798A;
   font-weight: 400;
+  width: 240px;
+  background: rgba(151, 202, 209, 0.12);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.events__location img {
+  vertical-align: middle;
 }
 
 .events__link {
