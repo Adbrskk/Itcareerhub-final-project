@@ -13,25 +13,12 @@
 
 <body>
     <div id="header-placeholder"></div>
-        
-    <div class="slider-main">
-        <div class="container">
-            <div class="slider-content">
-                <div class="slider-text">
-                The people platform—Where
-                    interests become friendships
-                </div>
-                <div class="slider-subtext">
-                    Whatever your interest, from hiking and reading to networking and skill sharing,
-                    there are thousands of people who share it on Meetup. Events are happening
-                    every day—sign up to join the fun.
-                </div>
-                <div class="slider-button">
-                    <button class="btn-primary btn-explore">
-                        Join Meetup
-                    </button>
+    <div id="filters-placeholder"></div>
 
-                </div>
+    <div class="events-main">
+        <div class="container">
+            <div class="events-content">     
+                <div id="events-list" class="events__grid"></div>
             </div>
             <div class="slider-image">
                 <img src="./images/main-img.png">
@@ -39,18 +26,6 @@
 
         </div>
     </div>
-
-<section class="events">
-  <div class="container">
-    <div class="events__top">
-      <h2>Events near</h2>
-      <div class="events__location">Mountain View, CA</div>
-      <a href="./events.html" class="events__link">See all events</a>
-    </div>
-
-    <div id="events-list" class="events__grid"></div>
-  </div>
-</section>
 </body>
 
 <script src="./js/main.js"></script>
@@ -60,5 +35,8 @@
   fetch("header.html")
     .then(response => response.text())
     .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+<script>
+
 </script>
 </html>
