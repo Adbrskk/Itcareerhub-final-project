@@ -34,6 +34,8 @@
 
         </div>
     </div>
+
+    <div id="footer-placeholder"></div>
 </body>
 
 <script src="./js/main.js"></script>
@@ -45,6 +47,8 @@
     .then(data => document.getElementById("header-placeholder").innerHTML = data);
 </script>
 <script>
-
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => document.getElementById("footer-placeholder").innerHTML = html);
 </script>
 </html>
