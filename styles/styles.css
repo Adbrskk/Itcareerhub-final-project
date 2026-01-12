@@ -236,16 +236,28 @@
   text-decoration: underline;
 }
 
-.categories-list{
-  display: flex;
-  gap: 1em;
+.news-header,
+.cities-header,
+.categories-header,
+.faq-header
+ {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  color: #212121;
 }
 
-.categories-item > div, .cities-list > div{
+.categories-list {
+  display: flex;
+  gap: 1em;
+
+}
+
+.categories-item > div, .cities-list > div {
   text-align: center;
 }
 
-.categories-item{  
+.categories-item {  
   background-color: #97CAD114;
   border-radius: 8px;
   align-content: center;
@@ -253,11 +265,11 @@
   flex: 1;
 }
 
- .categories-container > div, .cities-container > div, .faq-container > div, .news-container > div{
+ .categories-container > div, .cities-container > div, .faq-container > div, .news-container > div {
   padding: 20px 0;
 }
 
-.cities-list{
+.cities-list {
   margin-top: 10px;
   display: flex;
   gap: 2em;
@@ -266,24 +278,24 @@
   flex: 1;
  }
 
-.cities-image > img{
+.cities-image > img {
   border-radius: 9999px;
   width: 100%;
   height: 100%;
 }
 
-.cities-name{
+.cities-name {
   padding: 15px 0;
 }
 
-.faq-list{
+.faq-list {
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
 }
 
-.faq-item{
+.faq-item {
   flex: 1;
   min-width: 400px;
   padding: 24px;
@@ -293,17 +305,17 @@
   border-radius: 8px;
 }
 
-.faq-text{
+.faq-text {
   padding: 15px 0;
   max-width: 85%;
 }
 
-.faq-link{
+.faq-link {
   text-decoration: none;
   color: #00798A;
 }
 
-.news-list{
+.news-list {
   margin-top: 10px;
   display: flex;
   gap: 1em;
@@ -313,13 +325,13 @@
   padding: 0.5em 0;
 }
 
-.news-more{
+.news-more {
   text-decoration: none;
   color: #00798A;
 }
 
 .meetup-footer {
-  background: #181818;
+  background: #212121;
   color: #e5e5e5;
   padding: 40px 60px;
   font-family: system-ui, sans-serif;
@@ -337,7 +349,6 @@
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
 }
@@ -349,15 +360,22 @@
 .footer-top button {
   padding: 10px 18px;
   border-radius: 6px;
-  background: #fff;
-  border: none;
+  border: 2px solid #ffffff;
+  background: transparent;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 .footer-top button:hover {
-  background: #e6e6e6;
+  background: #616161;
 }
 
+.footer-top button a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
 hr {
   border: none;
   border-top: 1px solid #3b3b3b;
@@ -403,8 +421,6 @@ hr {
   height: 40px;
   margin-left: 10px;
 }
-
-/* Bottom */
 .footer-bottom {
   margin-top: 35px;
   display: flex;
@@ -416,6 +432,11 @@ hr {
 .footer-bottom a {
   color: #aaa;
   font-size: 14px;
+}
+
+.button a {
+  color: #000;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
