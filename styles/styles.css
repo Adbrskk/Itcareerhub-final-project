@@ -375,7 +375,15 @@ hr {
   color: #fff;
 }
 
-/* Social */
+.footer-col a {
+  display: block;
+  margin: 8px 0;
+  font-size: 15px;
+  color: #cfcfcf;
+  cursor: pointer;
+  font-style: normal;
+}
+
 .footer-social {
   display: flex;
   align-items: center;
