@@ -17,6 +17,12 @@
   gap: 22px;
   margin-top: 25px;
 }
+
+.events__online {
+  margin-top: 25px;
+  display: flex;
+}
+
 .event-card {
   background: #fff;
   border-radius: 14px;

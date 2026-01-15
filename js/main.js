@@ -57,8 +57,8 @@ function formatDate(date) {
   return date.toLocaleDateString('en-US', options);
 }
 
-function renderEvents(events) {
-  const container = document.getElementById("events-list");
+function renderEvents(list_id, events) {
+  const container = document.getElementById(list_id);
   container.innerHTML = "";
 
   events.forEach(event => {
@@ -204,7 +204,7 @@ function filterAndSortEvents(events) {
 
 function applyFilters() {
   const filteredEvents = filterAndSortEvents(eventsStore);
-  renderEvents(filteredEvents);
+  renderEvents("events-list", filteredEvents);
 }
 
 // -------------------------
@@ -215,6 +215,6 @@ function applyFilters() {
 document.addEventListener("DOMContentLoaded", () => {
   populateSelects();
   ensureEightEvents();
-  renderEvents(eventsStore);
-
+  renderEvents("events-list", eventsStore);
+  renderEvents("events-list__online", eventsStore.filter(e => e.type === "online"));
 });
