@@ -8,7 +8,6 @@
 .meetup-footer a {
   color: #cfcfcf;
   text-decoration: none;
-  margin: 5px 0;
 }
 
 .meetup-footer a:hover {
@@ -127,4 +126,27 @@ hr {
     flex-direction: column;
     gap: 15px;
   }
+}
+
+@media (max-width: 380px) {
+  .meetup-footer {
+    padding: 32px 16px;
+  }
+
+  .footer-top {
+    flex-direction: row;
+  }
+
+  .footer-top p {
+    font-size: 14px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 25px 0;
+ }
+
+.stores {
+    display: none;
+ }
 }
