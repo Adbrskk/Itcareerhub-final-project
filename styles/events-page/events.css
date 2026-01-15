@@ -1,5 +1,13 @@
+.events-main {
+    margin: 130px 0 100px;
+}
+
 .events-page__container {
   display: flex;
+}
+
+.events-header {
+    margin-bottom: 12px;
 }
 
 .events-header-text {
@@ -33,6 +41,10 @@
   padding: 16px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.map-block {
+    margin-left: 240px;
 }
 
 .map-wrapper {
@@ -76,4 +88,15 @@
     border: 2px solid #00798A;
     background: #fff;
     color: #00798A;
+}
+
+.map-block-header-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.map-block span {
+    font-size: 12px;
+    color: #212121;
 }
