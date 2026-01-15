@@ -106,36 +106,29 @@ hr {
   text-decoration: none;
 }
 
-@media (max-width: 900px) {
-  .footer-columns {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-columns {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 640px) {
 
   .footer-top {
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
   }
 
   .footer-social {
     flex-direction: column;
     gap: 15px;
   }
-}
-
-@media (max-width: 380px) {
-  .meetup-footer {
+  
+   .meetup-footer {
     padding: 32px 16px;
   }
 
   .footer-top {
     flex-direction: row;
   }
+}
+
+@media (max-width: 380px) {
 
   .footer-top p {
     font-size: 14px;
