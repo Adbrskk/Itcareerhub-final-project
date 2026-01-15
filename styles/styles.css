@@ -235,6 +235,10 @@
   border-radius: 8px;
 }
 
+.faq-item-header{
+  font-size: 20px;
+}
+
 .faq-text {
   padding: 15px 0;
   max-width: 85%;
@@ -347,6 +351,66 @@
     font-size: 0.7rem;
   }
 }
+@media (max-width: 380px) {
+  .slider-main{
+    margin: 0 !important;
+  }
+  .slider-text{
+    font-size: 25px !important;
+  }
+  .slider-main > .container{
+    display: block !important;
+  }
+  .slider-subtext{
+    padding: 0 !important;
+    font-size: 12px !important;
+  }
+  .slider-button{
+    display: none;
+  }
+  .slider-image > img{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .categories-header, .cities-header, .news-header, .faq-header{
+    font-size: 20px;
+  }
+
+  .categories-list, .cities-list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .categories-item{
+    flex: 0 0 40%;
+  }
+
+  .cities-container > p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #707070;
+    padding: 0 10px 0 0;
+    line-height: 200%;
+  }
+
+  .cities-item{
+    flex: 0 0 40%;
+  }
+
+  .faq-item{
+    min-width: 100%;
+  }
+
+  .faq-item-header{
+    font-size: 12px !important;
+  }
+
+  .faq-text, .faq-link{
+    font-size: 10px !important;
+  }
+}
+
 
 @media (max-width: 380px) {
 
