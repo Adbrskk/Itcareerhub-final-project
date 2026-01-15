@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
 
@@ -34,7 +36,7 @@
                 </div>
             </div>
             <div class="slider-image">
-                <img src="./images/main-img.png">
+                <img src="./img/main-img.png">
             </div>
 
         </div>
@@ -43,14 +45,29 @@
 <section class="events">
   <div class="container">
     <div class="events__top">
-      <div class="brbr">
+      <div class="events__loc">
         <h2>Events near</h2>
-        <div class="events__location">Mountain View, CA</div>
+        <div class="events__location">
+            Mountain View, CA
+            <img src="./img/icons/notes.svg" alt="">
+        </div>
       </div>
       <a href="./events.html" class="events__link">See all events</a>
     </div>
 
     <div id="events-list" class="events__grid"></div>
+  </div>
+</section>
+
+<section class="events">
+  <div class="container">
+    <div class="events__top">
+        <h2>Upcoming online events</h2>
+
+      <a href="./events.html" class="events__link">See all events</a>
+    </div>
+
+    <div id="events-list" class="events__"></div>
   </div>
 </section>
 
