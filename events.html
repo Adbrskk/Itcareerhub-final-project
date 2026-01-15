@@ -41,7 +41,7 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="map-overlay">
-                    <button class="map-button">Посмотреть на карте</button>
+                    <button class="map-button">Browse in map<img src="./img/icons/map_arrows.svg"/></button>
                 </div>
             </div>
 
@@ -53,7 +53,11 @@
 
 <script src="./js/main.js"></script>
 <script src="./js/index.js"></script>
-
+<script>
+    document.querySelector('.map-button').addEventListener('click', function () {
+        document.querySelector('.map-overlay').style.display = 'none';
+    });
+</script>
 <script>
   fetch("header.html")
     .then(response => response.text())
@@ -64,4 +68,5 @@
     .then(res => res.text())
     .then(html => document.getElementById("footer-placeholder").innerHTML = html);
 </script>
+
 </html>
