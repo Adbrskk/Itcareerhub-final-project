@@ -237,6 +237,7 @@
 
 .faq-item-header{
   font-size: 20px;
+  font-weight: 600;
 }
 
 .faq-text {
@@ -409,6 +410,21 @@
   .faq-text, .faq-link{
     font-size: 10px !important;
   }
+
+  .news-container__text{
+    display: none;
+  }
+  .news-item-header{
+    font-size: 16px;
+  }
+  .news-image > img{
+    width: 100%;
+  }
+
+  .news-list{
+    flex-wrap: wrap;
+  }
+
 }
 
 
