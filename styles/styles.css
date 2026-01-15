@@ -216,6 +216,7 @@
 
 .cities-name {
   padding: 15px 0;
+  font-weight: 600;
 }
 
 .faq-list {
@@ -250,6 +251,10 @@
   color: #00798A;
 }
 
+.news-item-header{
+  font-weight: 600;
+}
+
 .news-list {
   margin-top: 10px;
   display: flex;
@@ -260,6 +265,9 @@
   padding: 0.5em 0;
 }
 
+  .news-content, .cities-container > p{
+    color: #707070;
+  }
 .news-more {
   text-decoration: none;
   color: #00798A;
@@ -353,6 +361,14 @@
   }
 }
 @media (max-width: 380px) {
+  .container{
+    padding: 0 15px;
+  }
+
+  .categories-container > div, .cities-container > div, .faq-container > div, .news-container > div{
+    padding: 10px 0 !important;
+  }
+
   .slider-main{
     margin: 0 !important;
   }
@@ -379,9 +395,13 @@
     font-size: 20px;
   }
 
-  .categories-list, .cities-list{
+  .categories-list{
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .cities-list{
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .categories-item{
     flex: 0 0 40%;
@@ -424,7 +444,11 @@
   .news-list{
     flex-wrap: wrap;
   }
-
+  .news-content, .news-more{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+  }
 }
 
 
