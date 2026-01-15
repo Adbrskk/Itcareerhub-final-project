@@ -216,6 +216,7 @@
 
 .cities-name {
   padding: 15px 0;
+  font-weight: 600;
 }
 
 .faq-list {
@@ -235,6 +236,11 @@
   border-radius: 8px;
 }
 
+.faq-item-header{
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .faq-text {
   padding: 15px 0;
   max-width: 85%;
@@ -243,6 +249,10 @@
 .faq-link {
   text-decoration: none;
   color: #00798A;
+}
+
+.news-item-header{
+  font-weight: 600;
 }
 
 .news-list {
@@ -255,6 +265,9 @@
   padding: 0.5em 0;
 }
 
+  .news-content, .cities-container > p{
+    color: #707070;
+  }
 .news-more {
   text-decoration: none;
   color: #00798A;
@@ -351,6 +364,97 @@
     display: none;
   }
 }
+@media (max-width: 380px) {
+  .container{
+    padding: 0 15px;
+  }
+
+  .categories-container > div, .cities-container > div, .faq-container > div, .news-container > div{
+    padding: 10px 0 !important;
+  }
+
+  .slider-main{
+    margin: 0 !important;
+  }
+  .slider-text{
+    font-size: 25px !important;
+  }
+  .slider-main > .container{
+    display: block !important;
+  }
+  .slider-subtext{
+    padding: 0 !important;
+    font-size: 12px !important;
+  }
+  .slider-button{
+    display: none;
+  }
+  .slider-image > img{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .categories-header, .cities-header, .news-header, .faq-header{
+    font-size: 20px;
+  }
+
+  .categories-list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cities-list{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .categories-item{
+    flex: 0 0 40%;
+  }
+
+  .cities-container > p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #707070;
+    padding: 0 10px 0 0;
+    line-height: 200%;
+  }
+
+  .cities-item{
+    flex: 0 0 40%;
+  }
+
+  .faq-item{
+    min-width: 100%;
+  }
+
+  .faq-item-header{
+    font-size: 12px !important;
+  }
+
+  .faq-text, .faq-link{
+    font-size: 10px !important;
+  }
+
+  .news-container__text{
+    display: none;
+  }
+  .news-item-header{
+    font-size: 16px;
+  }
+  .news-image > img{
+    width: 100%;
+  }
+
+  .news-list{
+    flex-wrap: wrap;
+  }
+  .news-content, .news-more{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+}
+
 
 @media (max-width: 380px) {
 
