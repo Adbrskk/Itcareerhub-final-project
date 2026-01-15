@@ -62,8 +62,17 @@ function renderEvents(events) {
   container.innerHTML = "";
 
   events.forEach(event => {
+    var isOnline = "block";
+    if (event.type === "offline") {
+      isOnline = "none";
+    }
     const html = `
       <div class="event-card">
+        <div class='online-plashka' style='display:${isOnline}'><span>
+          <img src="./img/icons/online-event.svg" class="online-event"/>
+          Online event
+        </span></div>
+      
         <img src="${event.image}" alt="${event.title}" class="event-image">
 
         <div class="event-info">

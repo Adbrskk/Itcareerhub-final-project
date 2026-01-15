@@ -22,6 +22,7 @@
 .filter-wrapper { 
   border-radius: 40px; 
   background-color: #F6F7F8;
+  margin-right: 17px;
 }
 
 .filter-select {
