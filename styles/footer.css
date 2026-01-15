@@ -146,7 +146,15 @@ hr {
     margin: 25px 0;
  }
 
-.stores {
-    display: none;
- }
+    .stores {
+        display: none;
+    }
+
+    .footer-social {
+    flex-direction: row;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+    }
 }
