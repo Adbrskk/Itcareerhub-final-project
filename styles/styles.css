@@ -158,10 +158,6 @@
   text-decoration: none;
 }
 
-.events__location {
-  font-size: 13px;
-}
-
 .events__location-link {
   text-decoration: none;
 }
@@ -337,6 +333,10 @@
   .button-join-us {
     margin: 0 auto;
     text-align: center;
+  }
+
+  .events__location {
+  font-size: 13px;
   }
 
   .events__grid {
