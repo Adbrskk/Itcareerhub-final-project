@@ -112,21 +112,21 @@ function populateSelects(){
     if (filtersContainer == undefined)
       return;
     filters.forEach((filter) => {
-    // Create a wrapper div for each filter
+    
     const wrapper = document.createElement("div");
     wrapper.className = "filter-wrapper";
 
-    // Create the select element
+    
     const select = document.createElement("select");
     select.id = filter.type;
     select.name = filter.type;
     select.classList = "filter-select"
 
-    // Populate options
+    
     filter.options.forEach((option) => {
         const opt = document.createElement("option");
 
-        // If option is a Date object, format it as a readable string
+       
         if (option instanceof Date) {
         opt.value = option.toISOString();
         opt.textContent = option.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
